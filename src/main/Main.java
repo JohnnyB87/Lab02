@@ -1,3 +1,7 @@
+package main;
+
+import gui.GuessingGameTab;
+import gui.LotteryGameTab;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.TabPane;
@@ -16,10 +20,6 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         primaryStage.setTitle("Window");
-//        primaryStage.setMaxHeight(windowHeight);
-//        primaryStage.setMaxWidth(windowWidth);
-//        primaryStage.setMinHeight(windowHeight);
-//        primaryStage.setMinWidth(windowWidth);
         primaryStage.setResizable(false);
 
         TabPane tabPane = new TabPane();
