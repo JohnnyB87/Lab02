@@ -94,7 +94,11 @@ public class GuessingGameTab extends GameTab {
     public void checkResult(int guess) {
         boolean winner = this.num == guess;
         if(winner) {
-            winner();
+            try {
+                winner();
+            }catch(Exception e){
+
+            }
         }
         else if(this.guessesLeft == 0) {
         	this.txtFld.setDisable(true);
@@ -131,7 +135,7 @@ public class GuessingGameTab extends GameTab {
     }
 
     @Override
-    public void winner() {
+    public void winner() throws Exception {
         super.winner();
         this.alert = new Alert(Alert.AlertType.INFORMATION,
                 String.format("CONGRATULATIONS\nYou Win a %s star prize.", this.GAMESTARRATING), ButtonType.OK);

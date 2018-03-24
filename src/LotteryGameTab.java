@@ -125,8 +125,11 @@ public class LotteryGameTab extends GameTab {
 
         int size = this.winningNumbers.length;
         checkResult(size);
-        if(this.matchingNumbers > 3)
-            winner();
+        if(this.matchingNumbers > 3) {
+            try{
+                winner();
+            }catch(Exception e){}
+        }
         else
             loser();
         this.matchingNumbers = 0;
@@ -157,7 +160,7 @@ public class LotteryGameTab extends GameTab {
     }
 
     @Override
-    public void winner() {
+    public void winner() throws Exception{
         super.winner();
         String match = Integer.toString(this.matchingNumbers);
 
