@@ -14,11 +14,10 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.HashMap;
 
 public class PrizeTab extends Tab{
 
-    private HashMap<String, String> prizes;
+    private Tree<String, String> prizes;
     private TilePane tileButtons;
     private ListView<String> list;
     private ObservableList<String> items;
@@ -48,7 +47,7 @@ public class PrizeTab extends Tab{
         this.items = FXCollections.observableArrayList();
 
         try{
-            this.prizes = new HashMap<>();
+            this.prizes = new Tree<>();
             String pathToFile = "prizes.txt";
 
             File readMe = new File(pathToFile);
@@ -57,7 +56,7 @@ public class PrizeTab extends Tab{
 
             String newLine = br.readLine();
             do{
-                fillHashMap(n, newLine);
+                fillTree(n, newLine);
                 newLine = br.readLine();
             }while(newLine != null);
 
@@ -75,7 +74,7 @@ public class PrizeTab extends Tab{
 
     }
 
-    public void fillHashMap(int n, String newLine){
+    public void fillTree(int n, String newLine){
 
         String[] array = newLine.split(",");
         int prizeValue = -1;
@@ -89,7 +88,7 @@ public class PrizeTab extends Tab{
         if(prizeValue == n) {
             String key = array[1];
             String value = array[2];
-            this.prizes.put(key, value);
+            this.prizes.insertNode(key, value);
             this.items.add(key);
         }
         else if(prizeValue == -1) {
@@ -106,7 +105,7 @@ public class PrizeTab extends Tab{
                 (observable, oldValue, newValue) -> {
                     System.out.println("You selected " + newValue);
 
-                    String str = "You won \n" + prizes.get(newValue);
+                    String str = "You won \n" + prizes.findByKey(newValue);
 
                     Alert alert = new Alert(Alert.AlertType.INFORMATION, str);
                     alert.showAndWait();
