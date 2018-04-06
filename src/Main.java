@@ -8,21 +8,19 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    private int windowWidth = 400;
-    private int windowHeight = 350;
-    private static Stage primaryStage;
+    private static Stage primaryStage = new Stage();
 
     public static void main(String[] args){
         launch(args);
     }
 
     public static Stage getPrimaryStage() {
-        return primaryStage;
+        return Main.primaryStage;
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        this.primaryStage = getPrimaryStage();
+        primaryStage = getPrimaryStage();
         primaryStage.setTitle("Window");
         primaryStage.setResizable(false);
 
@@ -42,7 +40,9 @@ public class Main extends Application {
 
         StackPane layout = new StackPane();
         layout.getChildren().addAll(tabPane);
-        
+
+        int windowWidth = 400;
+        int windowHeight = 350;
         Scene scene = new Scene(layout, windowWidth, windowHeight);
 
         primaryStage.setScene(scene);

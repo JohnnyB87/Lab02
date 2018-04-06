@@ -161,12 +161,8 @@ public class LotteryGameTab extends GameTab {
 
     @Override
     public void winner() throws Exception{
+        super.setWinnerAlertBox(this.matchingNumbers);
         super.winner();
-        String match = Integer.toString(this.matchingNumbers);
-
-        this.alert = new Alert(Alert.AlertType.INFORMATION,
-                String.format("CONGRATULATIONS\nYou Win a %s star prize.",match),ButtonType.OK);
-        this.alert.showAndWait();
 
         //super.getPrizeTab().setDisable(false);
         super.getPrizeTab().loadPrizes(this.matchingNumbers);

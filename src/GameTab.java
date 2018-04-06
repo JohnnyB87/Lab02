@@ -127,6 +127,7 @@ public abstract class GameTab extends Tab{
     }
 
     public void winner() throws Exception{
+
         createStage();
         this.exit.setDisable(true);
         this.reset.setDisable(true);
@@ -140,17 +141,23 @@ public abstract class GameTab extends Tab{
         sp.getChildren().add(this.ps);
         Scene scene = new Scene(sp,350,300);
         Stage stage = new Stage();
+        stage.initModality(Modality.WINDOW_MODAL);
         stage.setTitle("Enter Details");
         stage.setScene(scene);
         stage.setResizable(false);
-        stage.initModality(Modality.WINDOW_MODAL);
-        //stage.initOwner(Main.getPrimaryStage());
+        stage.initOwner(Main.getPrimaryStage());
         stage.showAndWait();
     }
 
     public void loser() {
 //    	this.getTabPane().getTabs().add(prizeTab);
     	prizeTab.setDisable(true);
+    }
+
+    public void setWinnerAlertBox(int star){
+        this.alert = new Alert(Alert.AlertType.INFORMATION,
+                String.format("CONGRATULATIONS\nYou Win a %d star prize.",star),ButtonType.OK);
+        this.alert.showAndWait();
     }
     
     //------------------------------------

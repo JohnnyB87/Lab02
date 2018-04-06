@@ -136,10 +136,9 @@ public class GuessingGameTab extends GameTab {
 
     @Override
     public void winner() throws Exception {
+        super.setWinnerAlertBox(this.GAMESTARRATING);
         super.winner();
-        this.alert = new Alert(Alert.AlertType.INFORMATION,
-                String.format("CONGRATULATIONS\nYou Win a %s star prize.", this.GAMESTARRATING), ButtonType.OK);
-        alert.showAndWait();
+
         //super.getPrizeTab().setDisable(false);
         super.getPrizeTab().loadPrizes(this.GAMESTARRATING);
     }
