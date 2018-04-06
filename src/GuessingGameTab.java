@@ -95,7 +95,7 @@ public class GuessingGameTab extends GameTab {
         boolean winner = this.num == guess;
         if(winner) {
             try {
-                winner();
+                winner(this.GAMESTARRATING);
             }catch(Exception e){
 
             }
@@ -135,12 +135,12 @@ public class GuessingGameTab extends GameTab {
     }
 
     @Override
-    public void winner() throws Exception {
-        super.setWinnerAlertBox(this.GAMESTARRATING);
-        super.winner();
+    public void winner(int stars) throws Exception {
+        //super.setWinnerAlertBox(this.GAMESTARRATING);
+        super.winner(stars);
 
         //super.getPrizeTab().setDisable(false);
-        super.getPrizeTab().loadPrizes(this.GAMESTARRATING);
+        super.getPrizeTab().loadPrizes(stars);
     }
 
     @Override

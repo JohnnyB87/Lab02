@@ -126,8 +126,8 @@ public abstract class GameTab extends Tab{
         }
     }
 
-    public void winner() throws Exception{
-
+    public void winner(int stars) throws Exception{
+        setWinnerAlertBox(stars);
         createStage();
         this.exit.setDisable(true);
         this.reset.setDisable(true);

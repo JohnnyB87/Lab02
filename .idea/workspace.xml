@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="87a8b09f-4fdf-45a6-af12-89f69938a493" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab02.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab02/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab02/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab02/controllers/GameTab.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab02/fxml/GameTab.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameTab.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GuessingGameTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GuessingGameTab.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LotteryGameTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LotteryGameTab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,8 +41,8 @@
       <file leaf-file-name="GameTab.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameTab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="156" column="20" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
+            <state relative-caret-position="187">
+              <caret line="129" column="31" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -55,8 +50,8 @@
       <file leaf-file-name="GuessingGameTab.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GuessingGameTab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="140" selection-start-line="140" selection-end-line="140" />
+            <state relative-caret-position="-306">
+              <caret line="97" column="42" selection-start-line="97" selection-start-column="42" selection-end-line="97" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -64,8 +59,8 @@
       <file leaf-file-name="LotteryGameTab.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LotteryGameTab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="164" column="23" selection-start-line="164" selection-start-column="23" selection-end-line="164" selection-end-column="23" />
+            <state relative-caret-position="201">
+              <caret line="129" column="43" selection-start-line="129" selection-start-column="43" selection-end-line="129" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -287,7 +282,7 @@
       <workItem from="1521893402233" duration="9092000" />
       <workItem from="1521928382674" duration="40000" />
       <workItem from="1523012883431" duration="125000" />
-      <workItem from="1523013375228" duration="1594000" />
+      <workItem from="1523013375228" duration="2050000" />
     </task>
     <task id="LOCAL-00001" summary="moved classes to new packages">
       <created>1521841154896</created>
@@ -303,11 +298,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521904000856</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="blocked primary stage when new popup appears">
+      <created>1523015071584</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1523015071584</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21678000" />
+    <option name="totallyTimeSpent" value="22134000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -323,11 +325,11 @@
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="right" id="Run" order="9" visible="true" weight="0.3125" />
+      <window_info active="true" anchor="right" id="Run" order="9" visible="true" weight="0.3125" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14453125" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14453125" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -352,7 +354,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="moved classes to new packages" />
     <MESSAGE value="started to separate gui from logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="started to separate gui from logic" />
+    <MESSAGE value="blocked primary stage when new popup appears" />
+    <option name="LAST_COMMIT_MESSAGE" value="blocked primary stage when new popup appears" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java">
@@ -487,22 +490,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameTab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="156" column="20" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
+        <state relative-caret-position="187">
+          <caret line="129" column="31" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GuessingGameTab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
+        <state relative-caret-position="-306">
+          <caret line="97" column="42" selection-start-line="97" selection-start-column="42" selection-end-line="97" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LotteryGameTab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="164" column="23" selection-start-line="164" selection-start-column="23" selection-end-line="164" selection-end-column="23" />
+        <state relative-caret-position="201">
+          <caret line="129" column="43" selection-start-line="129" selection-start-column="43" selection-end-line="129" selection-end-column="43" />
         </state>
       </provider>
     </entry>
