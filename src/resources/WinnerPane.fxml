@@ -5,10 +5,11 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import controllers.WinnerPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
+<WinnerPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controllers.PersonPane"
+            fx:controller="controllers.WinnerPane"
             prefHeight="400.0" prefWidth="600.0">
     <Pane prefHeight="350.0" prefWidth="410.0" style="-fx-background-color: #bcbcbc;">
         <Label fx:id="fNameLabel" text="First Name" layoutX="75" layoutY="95"/>
@@ -18,4 +19,4 @@
         <Button fx:id="submit" text="Submit" onAction="#clickSubmitButton" prefWidth="60.0" layoutX="120" layoutY="235"/>
         <Button fx:id="clear" text="Clear" onAction="#clickClearButton" prefWidth="60.0" layoutX="240" layoutY="235"/>
     </Pane>
-</AnchorPane>
+</WinnerPane>

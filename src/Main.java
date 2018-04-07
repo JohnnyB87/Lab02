@@ -29,7 +29,7 @@ public class Main extends Application {
         String colour = "#bcbcbc";
         GuessingGameTab guessingGameTab = new GuessingGameTab("Guessing Game","Guess", colour);
         LotteryGameTab lotteryGameTab = new LotteryGameTab("Lottery Game","Submit", colour);
-        //PersonPane personTab = new PersonPane();
+        //WinnerPane personTab = new WinnerPane();
         
         guessingGameTab.setClosable(false);
         lotteryGameTab.setClosable(false);

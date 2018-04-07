@@ -2,15 +2,17 @@ package classes;
 
 import java.io.Serializable;
 
-public class Person implements Serializable{
+public class Winner implements Serializable{
 
     private String fName;
     private String lName;
     private int prizeValue;
 
-    public Person(){}
+    public Winner(int prizeValue){
+        this.prizeValue = prizeValue;
+    }
 
-    public Person(String fName, String lName, int prizeValue){
+    public Winner(String fName, String lName, int prizeValue){
         this.fName = fName;
         this.lName = lName;
         this.prizeValue = prizeValue;
@@ -23,12 +25,12 @@ public class Person implements Serializable{
         return fName;
     }
 
-    public int getPrizeValue() {
-        return prizeValue;
-    }
-
     public String getlName() {
         return lName;
+    }
+
+    public int getPrizeValue() {
+        return prizeValue;
     }
 
     //---------------------------

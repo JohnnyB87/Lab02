@@ -71,4 +71,5 @@ class GameTabTest {
     @Test
     void checkResult() {
     }
+
 }
