@@ -4,11 +4,8 @@
     <list default="true" id="87a8b09f-4fdf-45a6-af12-89f69938a493" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameTab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrizeTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrizeTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/ListOfWinners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/ListOfWinners.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Winner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Winner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/WinnerPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/WinnerPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/WinnerPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/WinnerPane.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +20,8 @@
       <file leaf-file-name="GameTab.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameTab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="149" column="5" lean-forward="true" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
+            <state relative-caret-position="368">
+              <caret line="36" column="27" lean-forward="true" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2067#2068#0" expanded="true" />
@@ -38,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/src/PrizeTab.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
               <folding>
                 <element signature="e#1483#1484#0" expanded="true" />
                 <element signature="e#1509#1510#0" expanded="true" />
@@ -50,7 +47,7 @@
       <file leaf-file-name="WinnerPane.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/WinnerPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="680">
               <caret line="40" column="47" lean-forward="true" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -87,12 +84,10 @@
       <file leaf-file-name="ListOfWinners.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/classes/ListOfWinners.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            <state relative-caret-position="221">
+              <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#231#232#0" expanded="true" />
-                <element signature="e#278#279#0" expanded="true" />
                 <element signature="e#312#313#0" expanded="true" />
                 <element signature="e#352#353#0" expanded="true" />
                 <element signature="e#224#225#0" expanded="true" />
@@ -102,9 +97,25 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="30" column="92" selection-start-line="30" selection-start-column="92" selection-end-line="30" selection-end-column="92" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Winners.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Winners.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -136,17 +147,17 @@
         <option value="$PROJECT_DIR$/src/controllers/GameTab.java" />
         <option value="$PROJECT_DIR$/src/fxml/GameTab.fxml" />
         <option value="$PROJECT_DIR$/src/JunitTesting/MainTest.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/JunitTesting/GameTabTest.java" />
         <option value="$PROJECT_DIR$/src/classes/Winner.java" />
         <option value="$PROJECT_DIR$/src/resources/WinnerPane.fxml" />
         <option value="$PROJECT_DIR$/src/controllers/WinnerPane.java" />
         <option value="$PROJECT_DIR$/src/GuessingGameTab.java" />
         <option value="$PROJECT_DIR$/src/LotteryGameTab.java" />
-        <option value="$PROJECT_DIR$/src/GameTab.java" />
-        <option value="$PROJECT_DIR$/src/PrizeTab.java" />
         <option value="$PROJECT_DIR$/Winners.txt" />
         <option value="$PROJECT_DIR$/src/classes/ListOfWinners.java" />
+        <option value="$PROJECT_DIR$/src/PrizeTab.java" />
+        <option value="$PROJECT_DIR$/src/GameTab.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -389,7 +400,7 @@
       <workItem from="1523012883431" duration="125000" />
       <workItem from="1523013375228" duration="11202000" />
       <workItem from="1523034331299" duration="6535000" />
-      <workItem from="1523276248798" duration="6536000" />
+      <workItem from="1523276248798" duration="8661000" />
     </task>
     <task id="LOCAL-00001" summary="moved classes to new packages">
       <created>1521841154896</created>
@@ -426,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523105734505</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixed issue with not being able to store names properly&#10;added file: winners&#10;can append to file &amp; arraylist">
+      <created>1523283435210</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1523283435210</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -441,7 +459,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44357000" />
+    <option name="totallyTimeSpent" value="46482000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -457,11 +475,11 @@
       <window_info anchor="right" id="Maven Projects" order="4" weight="0.3295302" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="right" id="Run" order="9" visible="true" weight="0.33355704" />
+      <window_info anchor="right" id="Run" order="9" visible="true" weight="0.3671141" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13355705" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13355705" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -489,7 +507,8 @@
     <MESSAGE value="blocked primary stage when new popup appears" />
     <MESSAGE value="changed winner() to winner(int) super class calls alert box now" />
     <MESSAGE value="m" />
-    <option name="LAST_COMMIT_MESSAGE" value="m" />
+    <MESSAGE value="fixed issue with not being able to store names properly&#10;added file: winners&#10;can append to file &amp; arraylist" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed issue with not being able to store names properly&#10;added file: winners&#10;can append to file &amp; arraylist" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -503,8 +522,6 @@
           <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
             <element signature="e#312#313#0" expanded="true" />
             <element signature="e#352#353#0" expanded="true" />
             <element signature="e#224#225#0" expanded="true" />
@@ -686,16 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/JunitTesting/GameTabTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
@@ -728,39 +735,6 @@
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/WinnerPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="40" column="47" lean-forward="true" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameTab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="149" column="5" lean-forward="true" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2067#2068#0" expanded="true" />
-            <element signature="e#2089#2090#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PrizeTab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-          <folding>
-            <element signature="e#1483#1484#0" expanded="true" />
-            <element signature="e#1509#1510#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/Winner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -785,16 +759,61 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Winners.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/WinnerPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="47" lean-forward="true" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrizeTab.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+          <folding>
+            <element signature="e#1483#1484#0" expanded="true" />
+            <element signature="e#1509#1510#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameTab.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="36" column="27" lean-forward="true" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2067#2068#0" expanded="true" />
+            <element signature="e#2089#2090#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="30" column="92" selection-start-line="30" selection-start-column="92" selection-end-line="30" selection-end-column="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/ListOfWinners.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        <state relative-caret-position="221">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
             <element signature="e#312#313#0" expanded="true" />
             <element signature="e#352#353#0" expanded="true" />
             <element signature="e#224#225#0" expanded="true" />

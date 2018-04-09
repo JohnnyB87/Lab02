@@ -146,7 +146,7 @@ public abstract class GameTab extends Tab{
         this.reset.setDisable(true);
         prizeTab.setDisable(false);
 
-        prizeTab.getLOF().add(winner);
+        prizeTab.getLOF().addToFile(winner);
     }
 
     public void createStage() throws Exception{
