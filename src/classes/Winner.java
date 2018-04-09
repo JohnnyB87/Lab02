@@ -12,6 +12,11 @@ public class Winner implements Serializable{
         this.prizeValue = prizeValue;
     }
 
+    public Winner(String fName, String lName) {
+        this.fName = fName;
+        this.lName = lName;
+    }
+
     public Winner(String fName, String lName, int prizeValue){
         this.fName = fName;
         this.lName = lName;

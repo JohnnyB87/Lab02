@@ -1,3 +1,4 @@
+import classes.ListOfWinners;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
@@ -21,11 +22,13 @@ public class PrizeTab extends Tab{
     private TilePane tileButtons;
     private ListView<String> list;
     private ObservableList<String> items;
+    private ListOfWinners LOF;
 
 
     public PrizeTab(String colour) {
         this.setText("Prizes");
         this.setClosable(false);
+        this.LOF = new ListOfWinners();
 
         Label label = new Label("CONGRATULATIONS");
         label.setAlignment(Pos.BASELINE_CENTER);
@@ -40,6 +43,10 @@ public class PrizeTab extends Tab{
 
         this.setContent(this.tileButtons);
 
+    }
+
+    public ListOfWinners getLOF() {
+        return this.LOF;
     }
 
     public void loadPrizes(int n){

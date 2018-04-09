@@ -22,14 +22,13 @@ public abstract class GameTab extends Tab{
     private Button guess = new Button();
     private WinnerPane ps;
     private Alert alert;
-    private Winner winner;
 
-    public GameTab(String title, String buttonName, String colour) {
+    public GameTab(String title, String buttonName, String colour){
 
         prizeTab = new PrizeTab(colour);
         this.setText(title);
         prizeTab.setDisable(true);
-        
+
         exit.setText("Exit");
         reset.setText("Reset");
         guess.setText(buttonName);
@@ -129,22 +128,25 @@ public abstract class GameTab extends Tab{
     }
 
     public void winner(int stars) throws Exception{
-//        this.ps = new WinnerPane();
-        this.ps = FXMLLoader.load(getClass().getResource("resources/WinnerPane.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("resources/WinnerPane.fxml"));
+        this.ps = loader.load();
+        WinnerPane c = loader.getController();
+
         setWinnerAlertBox(stars);
         createStage();
-        this.winner = new Winner(stars);
-        this.winner.setfName(this.ps.getfName());
-        this.winner.setlName(this.ps.getfName());
-//        Stage s = (Stage)this.ps.getScene().getWindow();
-//        s.close();
+
+        String fName = c.getfName();
+        String lName = c.getlName();
+        Winner winner = new Winner(fName, lName, stars);
+
+//        System.out.printf("FNAME: %s  LNAME: %s   STARS: %d%n"
+//                ,winner.getfName(),winner.getlName(),winner.getPrizeValue());
+
         this.exit.setDisable(true);
         this.reset.setDisable(true);
-
-        System.out.printf("FName: %s  LName: %s  prize %d%n"
-                ,this.winner.getfName(),this.winner.getlName(),this.winner.getPrizeValue());
-
         prizeTab.setDisable(false);
+
+        prizeTab.getLOF().add(winner);
     }
 
     public void createStage() throws Exception{
