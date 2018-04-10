@@ -1,3 +1,5 @@
+import controllers.ListOfWinnersTab;
+import controllers.WinnerPane;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -29,11 +31,17 @@ public class Main extends Application {
         String colour = "#bcbcbc";
         GuessingGameTab guessingGameTab = new GuessingGameTab("Guessing Game","Guess", colour);
         LotteryGameTab lotteryGameTab = new LotteryGameTab("Lottery Game","Submit", colour);
-        
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("resources/ListOfWinnersTab.fxml"));
+        ListOfWinnersTab lofwt = loader.load();
+        ListOfWinnersTab c = loader.getController();
+        lofwt.setText("Winners");
+
         guessingGameTab.setClosable(false);
         lotteryGameTab.setClosable(false);
+        lofwt.setClosable(false);
 
-        tabPane.getTabs().addAll(guessingGameTab, lotteryGameTab);
+        tabPane.getTabs().addAll(guessingGameTab, lotteryGameTab,lofwt);
 //        tabPane.getTabs().addAll(guessingGameTab, lotteryGameTab, personTab);
         guessingGameTab.showPrizeTab();
 

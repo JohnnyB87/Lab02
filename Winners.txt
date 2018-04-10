@@ -1,0 +1,11 @@
+john,Brady,4
+Hello,World,4
+TESTING,GUESSING,4
+TEST,lotto1,4
+Test,Lotto2,5
+TSET,Lotto3,6
+HAHA,AHAH,4
+kkk,kkkk,4
+gg,dd,4
+vinne,jones,4
+lots of,nammes :),4

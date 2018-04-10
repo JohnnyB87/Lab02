@@ -4,10 +4,16 @@ import java.io.Serializable;
 
 public class Winner implements Serializable{
 
+    //---------------------------
+    //          ATTRIBUTES
+    //---------------------------
     private String fName;
     private String lName;
     private int prizeValue;
 
+    //---------------------------
+    //          CONSTRUCTORS
+    //---------------------------
     public Winner(int prizeValue){
         this.prizeValue = prizeValue;
     }

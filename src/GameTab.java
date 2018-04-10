@@ -24,10 +24,12 @@ public abstract class GameTab extends Tab{
     private Alert alert;
 
     public GameTab(String title, String buttonName, String colour){
-
-        prizeTab = new PrizeTab(colour);
         this.setText(title);
-        prizeTab.setDisable(true);
+
+        if(prizeTab == null) {
+            prizeTab = new PrizeTab(colour);
+            prizeTab.setDisable(true);
+        }
 
         exit.setText("Exit");
         reset.setText("Reset");

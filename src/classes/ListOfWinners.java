@@ -31,11 +31,10 @@ public class ListOfWinners {
                 BufferedReader br = new BufferedReader(fr);
                 String str = br.readLine();
                 while(str != null){
-                    String[] list = str.split(" ");
+                    String[] list = str.split(",");
                     String fn = list[0];
                     String ln = list[1];
                     int n = Integer.parseInt(list[2]);
-//                    int n = 0;
                     Winner w = new Winner(fn,ln,n);
                     this.winners.add(w);
                     System.out.println("Added " + str);
@@ -56,7 +55,7 @@ public class ListOfWinners {
             else
                 fw = new FileWriter(this.file);
             BufferedWriter bw = new BufferedWriter(fw);
-            str = String.format("%s %s %d%n",w.getfName(),w.getlName(),w.getPrizeValue());
+            str = String.format("%s,%s,%d%n",w.getfName(),w.getlName(),w.getPrizeValue());
             bw.append(str);
             bw.close();
         }catch(IOException IOE){}
