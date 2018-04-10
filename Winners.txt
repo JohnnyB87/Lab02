@@ -5,7 +5,8 @@ TEST,lotto1,4
 Test,Lotto2,5
 TSET,Lotto3,6
 HAHA,AHAH,4
-kkk,kkkk,4
+kkk,kkk,4
 gg,dd,4
 vinne,jones,4
-lots of,nammes :),4
+lots of,names :),4
+adam is,gay,4
