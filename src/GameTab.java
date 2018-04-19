@@ -1,4 +1,4 @@
-import controllers.PersonPane;
+import controllers.WinnerPane;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -11,6 +11,7 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import classes.Winner;
 
 public abstract class GameTab extends Tab{
 
@@ -19,15 +20,17 @@ public abstract class GameTab extends Tab{
     private Button exit = new Button();
     private Button reset = new Button();
     private Button guess = new Button();
-    private Pane ps;
+    private WinnerPane ps;
     private Alert alert;
 
-    public GameTab(String title, String buttonName, String colour) {
-
-        prizeTab = new PrizeTab(colour);
+    public GameTab(String title, String buttonName, String colour){
         this.setText(title);
-        prizeTab.setDisable(true);
-        
+
+        if(prizeTab == null) {
+            prizeTab = new PrizeTab(colour);
+            prizeTab.setDisable(true);
+        }
+
         exit.setText("Exit");
         reset.setText("Reset");
         guess.setText(buttonName);
@@ -126,31 +129,54 @@ public abstract class GameTab extends Tab{
         }
     }
 
-    public void winner() throws Exception{
+    public void winner(int stars) throws Exception{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("resources/WinnerPane.fxml"));
+        this.ps = loader.load();
+        WinnerPane c = loader.getController();
+
+        setWinnerAlertBox(stars);
         createStage();
+
+        String fName = c.getfName();
+        String lName = c.getlName();
+        Winner winner = new Winner(fName, lName, stars);
+
+//        System.out.printf("FNAME: %s  LNAME: %s   STARS: %d%n"
+//                ,winner.getfName(),winner.getlName(),winner.getPrizeValue());
+
         this.exit.setDisable(true);
         this.reset.setDisable(true);
-        
         prizeTab.setDisable(false);
+
+        prizeTab.getLOF().addToFile(winner);
     }
 
     public void createStage() throws Exception{
-        this.ps = FXMLLoader.load(getClass().getResource("resources/PersonTab.fxml"));
+
+
         StackPane sp = new StackPane();
         sp.getChildren().add(this.ps);
+
         Scene scene = new Scene(sp,350,300);
         Stage stage = new Stage();
+
+        stage.initModality(Modality.WINDOW_MODAL);
         stage.setTitle("Enter Details");
         stage.setScene(scene);
         stage.setResizable(false);
-        stage.initModality(Modality.WINDOW_MODAL);
-        //stage.initOwner(Main.getPrimaryStage());
+        stage.initOwner(Main.getPrimaryStage());
         stage.showAndWait();
     }
 
     public void loser() {
 //    	this.getTabPane().getTabs().add(prizeTab);
     	prizeTab.setDisable(true);
+    }
+
+    public void setWinnerAlertBox(int star){
+        this.alert = new Alert(Alert.AlertType.INFORMATION,
+                String.format("CONGRATULATIONS\nYou Win a %d star prize.",star),ButtonType.OK);
+        this.alert.showAndWait();
     }
     
     //------------------------------------

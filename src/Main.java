@@ -1,3 +1,5 @@
+import controllers.ListOfWinnersTab;
+import controllers.WinnerPane;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -8,21 +10,19 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    private int windowWidth = 400;
-    private int windowHeight = 350;
-    private static Stage primaryStage;
+    private static Stage primaryStage = new Stage();
 
     public static void main(String[] args){
         launch(args);
     }
 
     public static Stage getPrimaryStage() {
-        return primaryStage;
+        return Main.primaryStage;
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        this.primaryStage = getPrimaryStage();
+        primaryStage = getPrimaryStage();
         primaryStage.setTitle("Window");
         primaryStage.setResizable(false);
 
@@ -31,18 +31,25 @@ public class Main extends Application {
         String colour = "#bcbcbc";
         GuessingGameTab guessingGameTab = new GuessingGameTab("Guessing Game","Guess", colour);
         LotteryGameTab lotteryGameTab = new LotteryGameTab("Lottery Game","Submit", colour);
-        //PersonPane personTab = new PersonPane();
-        
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("resources/ListOfWinnersTab.fxml"));
+        ListOfWinnersTab lofwt = loader.load();
+        ListOfWinnersTab c = loader.getController();
+        lofwt.setText("Winners");
+
         guessingGameTab.setClosable(false);
         lotteryGameTab.setClosable(false);
+        lofwt.setClosable(false);
 
-        tabPane.getTabs().addAll(guessingGameTab, lotteryGameTab);
+        tabPane.getTabs().addAll(guessingGameTab, lotteryGameTab,lofwt);
 //        tabPane.getTabs().addAll(guessingGameTab, lotteryGameTab, personTab);
         guessingGameTab.showPrizeTab();
 
         StackPane layout = new StackPane();
         layout.getChildren().addAll(tabPane);
-        
+
+        int windowWidth = 400;
+        int windowHeight = 350;
         Scene scene = new Scene(layout, windowWidth, windowHeight);
 
         primaryStage.setScene(scene);

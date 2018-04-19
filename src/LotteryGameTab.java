@@ -127,7 +127,7 @@ public class LotteryGameTab extends GameTab {
         checkResult(size);
         if(this.matchingNumbers > 3) {
             try{
-                winner();
+                winner(this.matchingNumbers);
             }catch(Exception e){}
         }
         else
@@ -160,16 +160,12 @@ public class LotteryGameTab extends GameTab {
     }
 
     @Override
-    public void winner() throws Exception{
-        super.winner();
-        String match = Integer.toString(this.matchingNumbers);
-
-        this.alert = new Alert(Alert.AlertType.INFORMATION,
-                String.format("CONGRATULATIONS\nYou Win a %s star prize.",match),ButtonType.OK);
-        this.alert.showAndWait();
+    public void winner(int stars) throws Exception{
+        super.setWinnerAlertBox(stars);
+        super.winner(stars);
 
         //super.getPrizeTab().setDisable(false);
-        super.getPrizeTab().loadPrizes(this.matchingNumbers);
+        super.getPrizeTab().loadPrizes(stars);
     }
 
     @Override
