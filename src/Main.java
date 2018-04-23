@@ -32,18 +32,20 @@ public class Main extends Application {
         GuessingGameTab guessingGameTab = new GuessingGameTab("Guessing Game","Guess", colour);
         LotteryGameTab lotteryGameTab = new LotteryGameTab("Lottery Game","Submit", colour);
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("resources/ListOfWinnersTab.fxml"));
-        ListOfWinnersTab lofwt = loader.load();
-        ListOfWinnersTab c = loader.getController();
-        lofwt.setText("Winners");
+//        FXMLLoader loader = new FXMLLoader(getClass().getResource("resources/ListOfWinnersTab.fxml"));
+//
+//        ListOfWinnersTab lofwt = loader.load();
+//        ListOfWinnersTab c = loader.getController();
+//        lofwt.setText("Previous Winners");
 
         guessingGameTab.setClosable(false);
         lotteryGameTab.setClosable(false);
-        lofwt.setClosable(false);
+//        lofwt.setClosable(false);
 
-        tabPane.getTabs().addAll(guessingGameTab, lotteryGameTab,lofwt);
+        tabPane.getTabs().addAll(guessingGameTab, lotteryGameTab);
 //        tabPane.getTabs().addAll(guessingGameTab, lotteryGameTab, personTab);
         guessingGameTab.showPrizeTab();
+        guessingGameTab.showLOfWTab();
 
         StackPane layout = new StackPane();
         layout.getChildren().addAll(tabPane);

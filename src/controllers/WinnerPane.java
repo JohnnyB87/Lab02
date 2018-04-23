@@ -44,12 +44,12 @@ public class WinnerPane extends Pane {
         this.lNameTxtFld.clear();
     }
 
-    public String getfName(){
+    public String getFName(){
         System.out.println("FIRST NAME: "+ this.fName);
         return this.fName;
     }
 
-    public String getlName() {
+    public String getLName() {
         System.out.println("LAST NAME: "+ this.lName);
         return this.lName;
     }

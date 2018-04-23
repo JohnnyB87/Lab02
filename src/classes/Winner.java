@@ -32,11 +32,11 @@ public class Winner implements Serializable{
     //---------------------------
     //          GETTERS
     //---------------------------
-    public String getfName() {
+    public String getFName() {
         return fName;
     }
 
-    public String getlName() {
+    public String getLName() {
         return lName;
     }
 
@@ -47,11 +47,11 @@ public class Winner implements Serializable{
     //---------------------------
     //          SETTERS
     //---------------------------
-    public void setfName(String fName) {
+    public void setFName(String fName) {
         this.fName = fName;
     }
 
-    public void setlName(String lName) {
+    public void setLName(String lName) {
         this.lName = lName;
     }
 
