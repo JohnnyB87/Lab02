@@ -1,25 +1,28 @@
 package classes;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-public class ListOfWinners {
+public class ListOfWinners{
     private List<Winner> winners;
     private File file = new File("Winners.txt");
+    private int length;
 
     public ListOfWinners(){
         this.winners = new ArrayList<>();
+        this.length = 0;
         loadFromFile();
         System.out.println("Size: " + this.winners.size());
     }
 
     public void add(Winner winner){
         this.winners.add(winner);
+        this.length++;
     }
 
     public void remove(Winner winner){
         this.winners.remove(winner);
+        this.length--;
     }
 
     public void loadFromFile(){
@@ -55,7 +58,7 @@ public class ListOfWinners {
             else
                 fw = new FileWriter(this.file);
             BufferedWriter bw = new BufferedWriter(fw);
-            str = String.format("%s,%s,%d%n",w.getfName(),w.getlName(),w.getPrizeValue());
+            str = String.format("%s,%s,%d%n",w.getFName(),w.getLName(),w.getPrizeValue());
             bw.append(str);
             bw.close();
         }catch(IOException IOE){}
@@ -65,12 +68,41 @@ public class ListOfWinners {
 
     public Winner get(String fName, String lName){
         for(Winner w : this.winners){
-            if(w.getfName().equalsIgnoreCase(fName)
-                    && w.getlName().equalsIgnoreCase(lName)){
+            if(w.getFName().equalsIgnoreCase(fName)
+                    && w.getLName().equalsIgnoreCase(lName)){
                 return w;
             }
         }
         System.out.println("No winner by this name.");
         return null;
+    }
+
+    public int size() {
+        return this.length;
+    }
+
+    public boolean isEmpty() {
+        return this.winners == null || this.length == 0;
+    }
+
+    public Object[] toArray() {
+        if(this.length == 0 || this.winners == null)
+            return null;
+        Object[] oa = new Object[this.length];
+        for(int i=0;i<this.length;i++){
+            oa[i] = this.winners.get(i);
+        }
+        return oa;
+    }
+
+
+    public Winner get(int i){
+        if(this.winners != null || this.length > 0)
+            return this.winners.get(i);
+        return null;
+    }
+
+    public List<Winner> getWinners(){
+        return this.winners;
     }
 }

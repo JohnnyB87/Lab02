@@ -28,7 +28,7 @@ public class GuessingGameTab extends GameTab {
     //			CONSTRUCTOR
     //------------------------------------
     
-    public GuessingGameTab(String title, String buttonName, String colour){
+    public GuessingGameTab(String title, String buttonName, String colour)throws Exception{
         super(title, buttonName, colour);
 
         this.txtFld = new TextField();

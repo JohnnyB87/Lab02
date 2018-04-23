@@ -1,3 +1,4 @@
+import controllers.ListOfWinnersTab;
 import controllers.WinnerPane;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -22,14 +23,10 @@ public abstract class GameTab extends Tab{
     private Button guess = new Button();
     private WinnerPane ps;
     private Alert alert;
+    private static ListOfWinnersTab listOfWinnersTab;
 
-    public GameTab(String title, String buttonName, String colour){
+    public GameTab(String title, String buttonName, String colour) throws Exception{
         this.setText(title);
-
-        if(prizeTab == null) {
-            prizeTab = new PrizeTab(colour);
-            prizeTab.setDisable(true);
-        }
 
         exit.setText("Exit");
         reset.setText("Reset");
@@ -49,9 +46,20 @@ public abstract class GameTab extends Tab{
 
         this.pane.setBottom(tileButtons);
         this.setContent(this.pane);
-        
-        if(this.getTabPane() != null)
-        	this.getTabPane().getTabs().add(prizeTab);
+
+        if(prizeTab == null) {
+            prizeTab = new PrizeTab(colour);
+            prizeTab.setDisable(true);
+        }
+        if(listOfWinnersTab == null){
+            listOfWinnersTab = new ListOfWinnersTab();
+            listOfWinnersTab.setText("Previous Winners");
+            listOfWinnersTab.setClosable(false);
+        }
+
+//        if(this.getTabPane() != null)
+//        	this.getTabPane().getTabs().add(prizeTab);
+
 
         exit.setOnAction(e -> exitGame());
 
@@ -81,6 +89,10 @@ public abstract class GameTab extends Tab{
         return alert;
     }
 
+//    public ListOfWinners getLOF() {
+//        return this.LOF;
+//    }
+
     //------------------------------------
     //			SETTERS
     //------------------------------------
@@ -104,7 +116,13 @@ public abstract class GameTab extends Tab{
     	else 
     		System.out.println("ERROR: No TAbPAne to add to.");
     }
-    
+
+    public void showLOfWTab() {
+        if(this.getTabPane() != null)
+            this.getTabPane().getTabs().add(listOfWinnersTab);
+        else
+            System.out.println("ERROR: No TAbPAne to add to.");
+    }
     //------------------------------------
     //			EXTRA FUNCTIONALITY
     //------------------------------------
@@ -137,21 +155,20 @@ public abstract class GameTab extends Tab{
         setWinnerAlertBox(stars);
         createStage();
 
-        String fName = c.getfName();
-        String lName = c.getlName();
+        String fName = c.getFName();
+        String lName = c.getLName();
         Winner winner = new Winner(fName, lName, stars);
 
-//        System.out.printf("FNAME: %s  LNAME: %s   STARS: %d%n"
-//                ,winner.getfName(),winner.getlName(),winner.getPrizeValue());
+        listOfWinnersTab.getWinnersTableView().getItems().addAll(winner);
 
         this.exit.setDisable(true);
         this.reset.setDisable(true);
         prizeTab.setDisable(false);
 
-        prizeTab.getLOF().addToFile(winner);
+        listOfWinnersTab.getLof().addToFile(winner);
     }
 
-    public void createStage() throws Exception{
+    public void createStage() {
 
 
         StackPane sp = new StackPane();

@@ -19,7 +19,7 @@ public class LotteryGameTab extends GameTab {
 	private boolean sixSelected = false;
 	private int matchingNumbers = 0;
 
-    public LotteryGameTab(String title, String buttonName, String colour){
+    public LotteryGameTab(String title, String buttonName, String colour)throws Exception{
         super(title, buttonName, colour);
 
         createRadioButtonLayout();
