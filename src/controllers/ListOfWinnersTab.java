@@ -4,17 +4,9 @@ import classes.ListOfWinners;
 import classes.Winner;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
-import javafx.util.Callback;
-
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
 
 public class ListOfWinnersTab extends Tab {
 
@@ -27,9 +19,9 @@ public class ListOfWinnersTab extends Tab {
     public ListOfWinnersTab(){
         lof = new ListOfWinners();
 
-        Pane pane = new Pane();
-        pane.prefHeight(350);
-        pane.prefWidth(410);
+        Pane winnerPane = new Pane();
+        winnerPane.prefHeight(350);
+        winnerPane.prefWidth(410);
 
         firstName = new TableColumn<>("First Name");
         firstName.setCellValueFactory(new PropertyValueFactory<>("fName"));
@@ -45,7 +37,6 @@ public class ListOfWinnersTab extends Tab {
 
         winnersTableView = new TableView<>();
         winnersTableView.setMaxSize(300,200);
-//        winnersTableView.maxWidth(300);
         winnersTableView.setLayoutX(75);
         winnersTableView.setLayoutY(50);
 
@@ -53,9 +44,9 @@ public class ListOfWinnersTab extends Tab {
 
         winnersTableView.getColumns().addAll(firstName, lastName, starPrize);
 
-        pane.getChildren().addAll(winnersTableView);
+        winnerPane.getChildren().addAll(winnersTableView);
 
-        this.setContent(pane);
+        this.setContent(winnerPane);
 
     }
 

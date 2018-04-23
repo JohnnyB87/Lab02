@@ -52,17 +52,13 @@ public abstract class GameTab extends Tab{
             prizeTab.setDisable(true);
         }
         if(listOfWinnersTab == null){
-            //LOF = new ListOfWinners();
             listOfWinnersTab = new ListOfWinnersTab();
             listOfWinnersTab.setText("Previous Winners");
             listOfWinnersTab.setClosable(false);
         }
 
-
-
-
-        if(this.getTabPane() != null)
-        	this.getTabPane().getTabs().add(prizeTab);
+//        if(this.getTabPane() != null)
+//        	this.getTabPane().getTabs().add(prizeTab);
 
 
         exit.setOnAction(e -> exitGame());
@@ -172,7 +168,7 @@ public abstract class GameTab extends Tab{
         listOfWinnersTab.getLof().addToFile(winner);
     }
 
-    public void createStage() throws Exception{
+    public void createStage() {
 
 
         StackPane sp = new StackPane();
