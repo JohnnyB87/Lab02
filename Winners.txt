@@ -3,7 +3,7 @@ Hello,World,4
 TESTING,GUESSING,4
 TEST,lotto1,4
 Test,Lotto2,5
-TSET,Lotto3,6
+TEST,Lotto3,6
 NEW,ENTRY,4
 WHOOP,WHOOP,6
 kik,lik,4
