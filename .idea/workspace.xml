@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="87a8b09f-4fdf-45a6-af12-89f69938a493" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameTab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/ListOfWinners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/ListOfWinners.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Winner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Winner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/ListOfWinnersTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ListOfWinnersTab.java" afterDir="false" />
-    </list>
+    <list default="true" id="87a8b09f-4fdf-45a6-af12-89f69938a493" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,8 +39,8 @@
       <file leaf-file-name="ListOfWinners.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/classes/ListOfWinners.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="374">
+              <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2361#2362#0" expanded="true" />
@@ -423,7 +416,7 @@
       <workItem from="1524498140760" duration="290000" />
       <workItem from="1524508466006" duration="3936000" />
       <workItem from="1524561564633" duration="478000" />
-      <workItem from="1524583885698" duration="7585000" />
+      <workItem from="1524583885698" duration="7978000" />
     </task>
     <task id="LOCAL-00001" summary="moved classes to new packages">
       <created>1521841154896</created>
@@ -502,7 +495,21 @@
       <option name="project" value="LOCAL" />
       <updated>1524512386248</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="serializable working">
+      <created>1524591544935</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1524591544935</updated>
+    </task>
+    <task id="LOCAL-00013" summary="serializable working">
+      <created>1524591742963</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1524591742963</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -523,7 +530,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85057000" />
+    <option name="totallyTimeSpent" value="85450000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -535,11 +542,11 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5013423" side_tool="true" weight="0.32763532" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50067115" side_tool="true" visible="true" weight="0.32905984" />
       <window_info anchor="right" id="Maven Projects" order="4" weight="0.3295302" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="right" id="Run" order="9" visible="true" weight="0.43892616" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" sideWeight="0.49932885" visible="true" weight="0.32905984" />
+      <window_info anchor="right" id="Run" order="9" visible="true" weight="0.43892616" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32905984" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -592,6 +599,32 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -606,7 +639,8 @@
     <MESSAGE value="started pane for ListOfWinners" />
     <MESSAGE value="messing around" />
     <MESSAGE value="fixed tableview" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed tableview" />
+    <MESSAGE value="serializable working" />
+    <option name="LAST_COMMIT_MESSAGE" value="serializable working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -837,8 +871,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/ListOfWinners.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="374">
+          <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2361#2362#0" expanded="true" />
