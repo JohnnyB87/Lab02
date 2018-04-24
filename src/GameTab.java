@@ -159,13 +159,14 @@ public abstract class GameTab extends Tab{
         String lName = c.getLName();
         Winner winner = new Winner(fName, lName, stars);
 
+        listOfWinnersTab.getLof().getWinners().add(winner);
+        listOfWinnersTab.getLof().writeToFile();
         listOfWinnersTab.getWinnersTableView().getItems().addAll(winner);
 
         this.exit.setDisable(true);
         this.reset.setDisable(true);
         prizeTab.setDisable(false);
 
-        listOfWinnersTab.getLof().addToFile(winner);
     }
 
     public void createStage() {

@@ -58,4 +58,9 @@ public class Winner implements Serializable{
     public void setPrizeValue(int prizeValue) {
         this.prizeValue = prizeValue;
     }
+
+    public String toString(){
+        String str = String.format("%s %s %d",this.fName,this.lName,this.prizeValue);
+        return str;
+    }
 }

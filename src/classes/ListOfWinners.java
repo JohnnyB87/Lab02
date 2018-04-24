@@ -3,67 +3,38 @@ package classes;
 import java.io.*;
 import java.util.*;
 
-public class ListOfWinners{
-    private List<Winner> winners;
-    private File file = new File("Winners.txt");
-    private int length;
+public class ListOfWinners implements Serializable{
 
-    public ListOfWinners(){
-        this.winners = new ArrayList<>();
-        this.length = 0;
-        loadFromFile();
-        System.out.println("Size: " + this.winners.size());
+    private ArrayList<Winner> winners = new ArrayList<>();
+    private String fileName = "docs/Winners.bin";
+
+    public void readFromFile(){
+
+        try {
+            FileInputStream fis = new FileInputStream(this.fileName);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+
+            this.winners = (ArrayList<Winner>) ois.readObject();
+
+            ois.close();
+            fis.close();
+        } catch (IOException | ClassNotFoundException e  ) {
+            System.out.println("ERROR: ");
+            e.printStackTrace();
+        }
+
     }
 
-    public void add(Winner winner){
-        this.winners.add(winner);
-        this.length++;
-    }
+    public void writeToFile(){
 
-    public void remove(Winner winner){
-        this.winners.remove(winner);
-        this.length--;
-    }
+        try {
+            FileOutputStream fos = new FileOutputStream(fileName,true);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
 
-    public void loadFromFile(){
-        System.out.println("\nLOADING...");
-        try{
-            FileReader fr;
-            if(this.file.exists()) {
-                fr = new FileReader(this.file);
-                BufferedReader br = new BufferedReader(fr);
-                String str = br.readLine();
-                while(str != null){
-                    String[] list = str.split(",");
-                    String fn = list[0];
-                    String ln = list[1];
-                    int n = Integer.parseInt(list[2]);
-                    Winner w = new Winner(fn,ln,n);
-                    this.winners.add(w);
-                    System.out.println("Added " + str);
-                    str = br.readLine();
-                }
-                br.close();
-            }
-        }catch(IOException IOE){}
-    }
-
-    public void addToFile(Winner w){
-        System.out.println("\nPRINTING...");
-        String str = "";
-        try{
-            FileWriter fw;
-            if(this.file.exists())
-                fw = new FileWriter(this.file,true);
-            else
-                fw = new FileWriter(this.file);
-            BufferedWriter bw = new BufferedWriter(fw);
-            str = String.format("%s,%s,%d%n",w.getFName(),w.getLName(),w.getPrizeValue());
-            bw.append(str);
-            bw.close();
-        }catch(IOException IOE){}
-        this.add(w);
-        System.out.println("Added " + str);
+            oos.writeObject(this.winners);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public Winner get(String fName, String lName){
@@ -77,32 +48,12 @@ public class ListOfWinners{
         return null;
     }
 
-    public int size() {
-        return this.length;
-    }
-
-    public boolean isEmpty() {
-        return this.winners == null || this.length == 0;
-    }
-
-    public Object[] toArray() {
-        if(this.length == 0 || this.winners == null)
-            return null;
-        Object[] oa = new Object[this.length];
-        for(int i=0;i<this.length;i++){
-            oa[i] = this.winners.get(i);
-        }
-        return oa;
-    }
-
-
-    public Winner get(int i){
-        if(this.winners != null || this.length > 0)
-            return this.winners.get(i);
-        return null;
-    }
-
-    public List<Winner> getWinners(){
+    public ArrayList<Winner> getWinners(){
         return this.winners;
     }
+
+    public void setWinners(ArrayList<Winner> winners) {
+        this.winners = winners;
+    }
+
 }

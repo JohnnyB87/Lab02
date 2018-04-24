@@ -16,8 +16,9 @@ public class ListOfWinnersTab extends Tab {
     private TableColumn<Winner, String> starPrize;
     private static ListOfWinners lof;
 
-    public ListOfWinnersTab(){
+    public ListOfWinnersTab() throws Exception{
         lof = new ListOfWinners();
+        lof.readFromFile();
 
         Pane winnerPane = new Pane();
         winnerPane.prefHeight(350);
