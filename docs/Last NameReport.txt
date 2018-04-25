@@ -1,0 +1,8 @@
+Name: cowboy bebop Prize Value: 4
+Name: test lotto Prize Value: 6
+Name: test outofmemory Prize Value: 4
+Name: sweet stuff Prize Value: 4
+Name: test vvm Prize Value: 4
+Name: whoop whoop Prize Value: 5
+Name: winner winner Prize Value: 4
+Name: oh yeah Prize Value: 6

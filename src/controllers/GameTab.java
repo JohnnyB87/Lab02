@@ -1,5 +1,6 @@
-import controllers.ListOfWinnersTab;
-import controllers.WinnerPane;
+package controllers;
+
+import classes.Main;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -13,8 +14,6 @@ import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import classes.Winner;
-
-import java.util.ArrayList;
 
 public abstract class GameTab extends Tab{
 
@@ -150,7 +149,7 @@ public abstract class GameTab extends Tab{
     }
 
     public void winner(int stars) throws Exception{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("resources/WinnerPane.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../resources/WinnerPane.fxml"));
         this.ps = loader.load();
         WinnerPane c = loader.getController();
 

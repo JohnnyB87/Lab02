@@ -42,7 +42,7 @@ public class ListOfWinners implements Serializable{
         }
     }
 
-    public Winner get(String fName, String lName){
+    public Winner getWinnerByName(String fName, String lName){
         for(Winner w : this.winners){
             if(w.getFName().equalsIgnoreCase(fName)
                     && w.getLName().equalsIgnoreCase(lName)){

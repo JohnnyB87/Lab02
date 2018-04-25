@@ -1,10 +1,11 @@
+package controllers;
+
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-
 import java.util.ArrayList;
 import java.util.Random;
 

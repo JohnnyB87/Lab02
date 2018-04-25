@@ -1,4 +1,7 @@
-import classes.Winner;
+package classes;
+
+import controllers.GuessingGameTab;
+import controllers.LotteryGameTab;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.TabPane;
