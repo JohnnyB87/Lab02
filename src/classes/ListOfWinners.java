@@ -19,8 +19,13 @@ public class ListOfWinners implements Serializable{
             ois.close();
             fis.close();
         } catch (IOException | ClassNotFoundException e  ) {
-            System.out.println("ERROR: ");
-            e.printStackTrace();
+            System.out.println("No such file exists\nCREATING FILE...");
+            File file = new File(this.fileName);
+            try {
+                file.createNewFile();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
         }
 
     }
@@ -28,7 +33,7 @@ public class ListOfWinners implements Serializable{
     public void writeToFile(){
 
         try {
-            FileOutputStream fos = new FileOutputStream(fileName,true);
+            FileOutputStream fos = new FileOutputStream(fileName);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
 
             oos.writeObject(this.winners);

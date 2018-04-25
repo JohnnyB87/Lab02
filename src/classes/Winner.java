@@ -60,7 +60,7 @@ public class Winner implements Serializable{
     }
 
     public String toString(){
-        String str = String.format("%s %s %d",this.fName,this.lName,this.prizeValue);
+        String str = String.format("Name: %s %s Prize Value: %d",this.fName,this.lName,this.prizeValue);
         return str;
     }
 }

@@ -135,15 +135,6 @@ public class GuessingGameTab extends GameTab {
     }
 
     @Override
-    public void winner(int stars) throws Exception {
-        //super.setWinnerAlertBox(this.GAMESTARRATING);
-        super.winner(stars);
-
-        //super.getPrizeTab().setDisable(false);
-        super.getPrizeTab().loadPrizes(stars);
-    }
-
-    @Override
     public void loser() {
     	super.loser();
     	String str = String.format("YOU LOSE%nThe winning number was: %d", this.num);

@@ -14,6 +14,8 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import classes.Winner;
 
+import java.util.ArrayList;
+
 public abstract class GameTab extends Tab{
 
 	private static PrizeTab prizeTab;
@@ -165,13 +167,22 @@ public abstract class GameTab extends Tab{
 
         this.exit.setDisable(true);
         this.reset.setDisable(true);
-        prizeTab.setDisable(false);
 
+        prizeTab.setDisable(false);
+        prizeTab.loadPrizes(stars);
+
+        //Create out of memory error
+//        ArrayList<Winner> winners = new ArrayList<>();
+//        while(!prizeTab.isDisabled()){
+//            System.out.println("LOL");
+//
+//            Winner w = new Winner("fName","lName",3);
+//            winners.add(w);
+//
+//        }
     }
 
     public void createStage() {
-
-
         StackPane sp = new StackPane();
         sp.getChildren().add(this.ps);
 
@@ -187,11 +198,10 @@ public abstract class GameTab extends Tab{
     }
 
     public void loser() {
-//    	this.getTabPane().getTabs().add(prizeTab);
     	prizeTab.setDisable(true);
     }
 
-    public void setWinnerAlertBox(int star){
+    private void setWinnerAlertBox(int star){
         this.alert = new Alert(Alert.AlertType.INFORMATION,
                 String.format("CONGRATULATIONS\nYou Win a %d star prize.",star),ButtonType.OK);
         this.alert.showAndWait();

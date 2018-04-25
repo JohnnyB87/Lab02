@@ -1,18 +1,17 @@
-import controllers.ListOfWinnersTab;
-import controllers.WinnerPane;
+import classes.Winner;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TabPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import java.util.ArrayList;
 
 public class Main extends Application {
 
     private static Stage primaryStage = new Stage();
 
     public static void main(String[] args){
+//        createOutOfMemory();
         launch(args);
     }
 
@@ -51,4 +50,11 @@ public class Main extends Application {
 
     }
 
+    private static void createOutOfMemory(){
+        ArrayList<Winner> winners = new ArrayList<>();
+        while(true){
+            Winner w = new Winner("fName","lName",3);
+            winners.add(w);
+        }
+    }
 }

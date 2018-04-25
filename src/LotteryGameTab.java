@@ -160,15 +160,6 @@ public class LotteryGameTab extends GameTab {
     }
 
     @Override
-    public void winner(int stars) throws Exception{
-        super.setWinnerAlertBox(stars);
-        super.winner(stars);
-
-        //super.getPrizeTab().setDisable(false);
-        super.getPrizeTab().loadPrizes(stars);
-    }
-
-    @Override
     public void loser() {
     	super.loser();
         String array = Arrays.toString(this.winningNumbers);

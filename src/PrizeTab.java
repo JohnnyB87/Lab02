@@ -1,4 +1,3 @@
-import classes.ListOfWinners;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
@@ -19,7 +18,6 @@ public class PrizeTab extends Tab{
     private TilePane tileButtons;
     private ListView<String> list;
     private ObservableList<String> items;
-
 
     public PrizeTab(String colour) {
         this.setText("Prizes");
